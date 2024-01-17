@@ -1,4 +1,8 @@
-function AuctionForm() {
+interface AuctionFormProps {
+  onCancel: () => void;
+}
+
+function AuctionForm({ onCancel} : AuctionFormProps) {
     return (
       <form className="input-group vertical">
         <label htmlFor="name">Auction Name</label>
@@ -10,7 +14,8 @@ function AuctionForm() {
         <div className="input-group">
           <button className="primary bordered medium">Save</button>
           <span />
-          <button type="button" className="bordered medium">
+          <button type="button" className="bordered medium" 
+            onClick={onCancel}>
             cancel
           </button>
         </div>
