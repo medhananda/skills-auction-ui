@@ -5,9 +5,10 @@ import React, { useState } from 'react';
 
 interface AuctionListProps {
   auctions: Auction[];
+  onSave: (auction: Auction) => void;
 }
 
-function AuctionList({ auctions }: AuctionListProps) {
+function AuctionList({ auctions , onSave}: AuctionListProps) {
   const [auctionBeingEdited, setAuctionBeingEdited] = useState({});
   const cancelEditing = () => {
    console.log("cancelEditing in AuctionList");
@@ -22,7 +23,7 @@ function AuctionList({ auctions }: AuctionListProps) {
       {auctions.map((auction) => (
        <div key={auction.id} className="cols-sm">
        {auction === auctionBeingEdited ? (
-         <AuctionForm onCancel={cancelEditing} />
+         <AuctionForm onSave={onSave} onCancel={cancelEditing} />
        ) : (
          <AuctionCard auction={auction} onEdit={handleEdit} />
        )}
