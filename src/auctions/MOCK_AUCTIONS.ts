@@ -19,7 +19,7 @@ export const MOCK_AUCTIONS = [
     name: 'Wine and Poetry at Padkis',
     description:
       'Wine and Read Poems',
-    imageUrl: 'https://picsum.photos/200/100', 
+    imageUrl: 'https://picsum.photos/100/100', 
     offeredBy: 'Milind Padki',
     numberOfOffers: 4,
     initialBid: 50,
