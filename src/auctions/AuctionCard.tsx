@@ -7,12 +7,13 @@ function formatDescription(description: string): string {
 
 interface AuctionCardProps {
     auction: Auction;
+    onEdit: (auction: Auction) => void;
 }
 
 function AuctionCard(props: AuctionCardProps) {
-    const { auction } = props;
+    const { auction, onEdit} = props;
     const handleEditClick = (auctionBeingEdited: Auction) => {
-        console.log(auctionBeingEdited);
+        onEdit(auctionBeingEdited);
     };
 
     return (

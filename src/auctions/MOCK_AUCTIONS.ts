@@ -15,7 +15,7 @@ export const MOCK_AUCTIONS = [
     offerdOn: new Date("2024-11-22")
   }),
   new Auction({
-    id: 1,
+    id: 2,
     name: 'Wine and Poetry at Padkis',
     description:
       'Wine and Read Poems',
