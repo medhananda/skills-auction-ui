@@ -3,7 +3,7 @@ import { Auction } from './Auction';
 export const MOCK_AUCTIONS = [
   new Auction({
     id: 1,
-    name: 'Dinner at Padkis',
+    name: 'Dinner at Padkis in Spring',
     description:
       'Dinner at Padkis',
     imageUrl: 'https://picsum.photos/200/100', 

@@ -1,5 +1,6 @@
 import { Auction } from './Auction';
 import AuctionCard from './AuctionCard';
+import AuctionForm from './AuctionForm';
 
 interface AuctionListProps {
   auctions: Auction[];
@@ -11,6 +12,7 @@ function AuctionList({ auctions }: AuctionListProps) {
       {auctions.map((auction) => (
         <div key={auction.id} className="col-sm-3">
           <AuctionCard auction={auction} />
+          <AuctionForm/>
         </div>
       ))}
     </div>
